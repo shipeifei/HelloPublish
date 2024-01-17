@@ -100,7 +100,7 @@ public class ModelNoActivity extends BaseActivity {
 
     private void getData(String type) {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getrmodellist.asp?mac=afc1d387b4ab661d&device_id=" + type;
+        String url = Constant.getBaseUrl(this) + "getrmodellist?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&device_id=" + type;
         queue.add(new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

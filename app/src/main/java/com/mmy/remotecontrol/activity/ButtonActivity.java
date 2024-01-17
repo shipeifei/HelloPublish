@@ -194,7 +194,7 @@ public class ButtonActivity extends BaseActivity {
 
     private void getButtonData(String brandId) {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getkeylist.asp?mac=afc1d387b4ab661d&kfid=" + brandId;
+        String url = Constant.getBaseUrl(this) + "getkeylist?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&kfid=" + brandId;
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(new StringRequest(url, new Response.Listener<String>() {
             @Override
@@ -317,7 +317,7 @@ public class ButtonActivity extends BaseActivity {
     private void getKeyEvent(int key, int position, String control_id) {
         loadingDialog();
         String id = TextUtils.isEmpty(control_id) ? testBeanData.get(position).getId() : control_id;
-        String url = Constant.getBaseUrl(this) + "keyevent.asp?mac=afc1d387b4ab661d&keyid="
+        String url = Constant.getBaseUrl(this) + "keyevent?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&keyid="
                 + key + "&kfid=" + id;
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(new StringRequest(url, new Response.Listener<String>() {

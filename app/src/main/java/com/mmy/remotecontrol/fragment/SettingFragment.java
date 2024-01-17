@@ -46,7 +46,7 @@ public class SettingFragment extends Fragment {
 
     private void showAbout() {
         AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                .setMessage("本APP由深圳市辉联智控科技有限公司提供红外码库支持，如果您有什么建议或意见欢迎致电：13713786996").create();
+                .setMessage("本APP由上海数氪智能有限公司提供红外码库支持").create();
         dialog.show();
     }
 

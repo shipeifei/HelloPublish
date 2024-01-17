@@ -97,7 +97,7 @@ public class BrandActivity extends BaseActivity {
 
     private void getData(final String type) {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getbrandlist.asp?mac=afc1d387b4ab661d&device_id=" + type;
+        String url = Constant.getBaseUrl(this) + "getbrandlist?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&device_id=" + type;
         queue.add(new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -147,7 +147,7 @@ public class BrandActivity extends BaseActivity {
 
     private void getDataEn(String type) {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getbrandlist.asp?mac=afc1d387b4ab661d&device_id=" + type + "&lang=en";
+        String url = Constant.getBaseUrl(this) + "getbrandlist?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&device_id=" + type + "&lang=en";
         queue.add(new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -248,7 +248,7 @@ public class BrandActivity extends BaseActivity {
 
     private void getModelNo(String brandId) {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getmodellist.asp?mac=afc1d387b4ab661d&device_id=" + typeId + "&brand_id=" + brandId;
+        String url = Constant.getBaseUrl(this) + "getmodellist?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&device_id=" + typeId + "&brand_id=" + brandId;
         queue.add(new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

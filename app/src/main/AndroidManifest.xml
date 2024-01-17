@@ -34,6 +34,8 @@
         <activity android:name=".activity.ModelNoActivity" />
         <activity android:name=".activity.ButtonActivity" />
         <activity android:name=".activity.AirControlActivity"></activity>
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
     </application>
 
 </manifest>

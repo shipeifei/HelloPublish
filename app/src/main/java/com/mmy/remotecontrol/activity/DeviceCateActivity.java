@@ -116,7 +116,7 @@ public class DeviceCateActivity extends BaseActivity {
 
     private void getData() {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getdevicelist.asp?mac=afc1d387b4ab661d";
+        String url = Constant.getBaseUrl(this) + "getdevicelist?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d";
         queue.add(new StringRequest(url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

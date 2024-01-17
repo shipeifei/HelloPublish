@@ -133,7 +133,7 @@ public class SmartMatchActivity extends BaseActivity {
 
     private void match(String code) {
         loadingDialog();
-        String url = Constant.getBaseUrl(this) + "getrid.asp?mac=afc1d387b4ab661d&kcode=" + code + "&device_id=" + typeId;
+        String url = Constant.getBaseUrl(this) + "getrid?ak=d4cb3fb1b53811eeb455cd4b0b3ec5c7&sn=d4cb3fb1b53811eeb455cd4b0b3ec5c7&mac=afc1d387b4ab661d&kcode=" + code + "&device_id=" + typeId;
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(new StringRequest(url, new Response.Listener<String>() {
             @Override

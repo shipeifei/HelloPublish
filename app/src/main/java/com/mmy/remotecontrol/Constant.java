@@ -11,7 +11,7 @@ import android.text.TextUtils;
  */
 public class Constant {
     private static String BASE_URL_KEY = "base_url_key";
-    private static String baseUrl = "http://cir.huilink.com.cn/";
+    private static String baseUrl = "http://swapi.yueqizhixiang.com/dmp/lr/";
 //    private static String baseUrl = "http://www.huilink.com.cn/dk2018/";
 
     public static String getBaseUrl(Context context) {
