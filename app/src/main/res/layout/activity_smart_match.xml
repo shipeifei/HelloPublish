@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@mipmap/control_bg"
+    tools:context=".activity.SmartMatchActivity">
+    <View
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="25dp"/>
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:onClick="back"
+            android:paddingLeft="20dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="智能匹配"
+            android:textColor="@color/main_black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/title_layout"
+        android:layout_marginTop="40dp"
+        android:text="匹配数据：" />
+
+    <EditText
+        android:id="@+id/input_et"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tips"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit_bg"
+        android:gravity="top"
+        android:hint="请在此输入匹配数据"
+        android:text="83060642000080000000200000E400250000201510" />
+
+    <Button
+        android:id="@+id/start_match"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="开始匹配" />
+
+    <RelativeLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_bg"
+        android:layout_above="@id/start_match"
+        android:layout_below="@id/tips"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/match_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="关闭" />
+
+    </RelativeLayout>
+</RelativeLayout>
